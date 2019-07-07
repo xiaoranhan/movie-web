@@ -7,12 +7,6 @@ const keys = require("../config/keys");
 // User Model
 const User = require("../models/User");
 
-// Login
-router.get("/login", (req, res) => res.send("login"));
-
-// Register
-router.get("/register", (req, res) => res.send("register"));
-
 // Validation
 // Load input validation
 const validateRegisterInput = require("../validation/register");
