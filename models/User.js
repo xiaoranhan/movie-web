@@ -11,12 +11,14 @@ const UserSchema = new mongoose.Schema({
   },
   password: {
     type: String,
-    required: true
+    required: true,
+    select: false
   },
   date: {
     type: Date,
     default: Date.now
-  }
+  },
+  movies: [{ type: mongoose.Schema.Types.ObjectId, ref: "Movie" }]
 });
 
 const User = mongoose.model("User", UserSchema);
